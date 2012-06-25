@@ -1,3 +1,42 @@
+/*
+ * 
+ *                  xxxxxxx      xxxxxxx
+ *                   x:::::x    x:::::x 
+ *                    x:::::x  x:::::x  
+ *                     x:::::xx:::::x   
+ *                      x::::::::::x    
+ *                       x::::::::x     
+ *                       x::::::::x     
+ *                      x::::::::::x    
+ *                     x:::::xx:::::x   
+ *                    x:::::x  x:::::x  
+ *                   x:::::x    x:::::x 
+ *              THE xxxxxxx      xxxxxxx TOOLKIT
+ *                    
+ *                  http://www.goXTK.com
+ *                   
+ * Copyright (c) 2012 The X Toolkit Developers <dev@goXTK.com>
+ *                   
+ *    The X Toolkit (XTK) is licensed under the MIT License:
+ *      http://www.opensource.org/licenses/mit-license.php
+ * 
+ *      "Free software" is a matter of liberty, not price.
+ *      "Free" as in "free speech", not as in "free beer".
+ *                                         - Richard M. Stallman
+ * 
+ * FUELED BY:
+ *  - the wonderful Constructive Solid Geometry library by Evan Wallace (http://madebyevan.com)
+ *    LICENSE: https://raw.github.com/xtk/X/master/lib/csg/LICENSE
+ *
+ *  - parts of the Google Closure Library (http://code.google.com/closure/library)
+ *    LICENSE: https://raw.github.com/xtk/X/master/lib/closure-library/LICENSE
+ * 
+ *  - the JSXCompressor library (http://jsxgraph.uni-bayreuth.de/wp/jsxcompressor/)
+ *    LICENSE: https://raw.github.com/xtk/X/master/lib/JXG/LICENSE
+ *
+ * MORE CREDITS: https://raw.github.com/xtk/X/master/LICENSE
+ *
+ */
 function i(a){throw a;}var m=void 0,o=!0,r=null,s=!1;function aa(){return function(){}}function ba(a){return function(b){this[a]=b}}function u(a){return function(){return this[a]}}var v,ca=this;function da(){}
 function ea(a){var b=typeof a;if("object"==b)if(a){if(a instanceof Array)return"array";if(a instanceof Object)return b;var c=Object.prototype.toString.call(a);if("[object Window]"==c)return"object";if("[object Array]"==c||"number"==typeof a.length&&"undefined"!=typeof a.splice&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("splice"))return"array";if("[object Function]"==c||"undefined"!=typeof a.call&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("call"))return"function"}else return"null";
 else if("function"==b&&"undefined"==typeof a.call)return"object";return b}function ga(a){return a!==m}function x(a){return a!=r}function ja(a){return"array"==ea(a)}function ka(a){var b=ea(a);return"array"==b||"object"==b&&"number"==typeof a.length}function la(a){return"string"==typeof a}function z(a){return"number"==typeof a}function ma(a){return"function"==ea(a)}function pa(a){a=ea(a);return"object"==a||"array"==a||"function"==a}function qa(a){return a[sa]||(a[sa]=++ta)}
