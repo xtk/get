@@ -1,3 +1,42 @@
+/*
+ * 
+ *                  xxxxxxx      xxxxxxx
+ *                   x:::::x    x:::::x 
+ *                    x:::::x  x:::::x  
+ *                     x:::::xx:::::x   
+ *                      x::::::::::x    
+ *                       x::::::::x     
+ *                       x::::::::x     
+ *                      x::::::::::x    
+ *                     x:::::xx:::::x   
+ *                    x:::::x  x:::::x  
+ *                   x:::::x    x:::::x 
+ *              THE xxxxxxx      xxxxxxx TOOLKIT
+ *                    
+ *                  http://www.goXTK.com
+ *                   
+ * Copyright (c) 2012 The X Toolkit Developers <dev@goXTK.com>
+ *                   
+ *    The X Toolkit (XTK) is licensed under the MIT License:
+ *      http://www.opensource.org/licenses/mit-license.php
+ * 
+ *      "Free software" is a matter of liberty, not price.
+ *      "Free" as in "free speech", not as in "free beer".
+ *                                         - Richard M. Stallman
+ * 
+ * FUELED BY:
+ *  - the wonderful Constructive Solid Geometry library by Evan Wallace (http://madebyevan.com)
+ *    LICENSE: https://raw.github.com/xtk/X/master/lib/csg/LICENSE
+ *
+ *  - parts of the Google Closure Library (http://code.google.com/closure/library)
+ *    LICENSE: https://raw.github.com/xtk/X/master/lib/closure-library/LICENSE
+ * 
+ *  - the JSXCompressor library (http://jsxgraph.uni-bayreuth.de/wp/jsxcompressor/)
+ *    LICENSE: https://raw.github.com/xtk/X/master/lib/JXG/LICENSE
+ *
+ * MORE CREDITS: https://raw.github.com/xtk/X/master/LICENSE
+ *
+ */
 function i(a){throw a;}var m=void 0,o=!0,r=null,s=!1;function aa(){return function(){}}function ba(a){return function(b){this[a]=b}}function u(a){return function(){return this[a]}}var v,ca=this;function da(){}
 function ea(a){var b=typeof a;if("object"==b)if(a){if(a instanceof Array)return"array";if(a instanceof Object)return b;var c=Object.prototype.toString.call(a);if("[object Window]"==c)return"object";if("[object Array]"==c||"number"==typeof a.length&&"undefined"!=typeof a.splice&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("splice"))return"array";if("[object Function]"==c||"undefined"!=typeof a.call&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("call"))return"function"}else return"null";
 else if("function"==b&&"undefined"==typeof a.call)return"object";return b}function ga(a){return a!==m}function x(a){return a!=r}function ja(a){return"array"==ea(a)}function ka(a){var b=ea(a);return"array"==b||"object"==b&&"number"==typeof a.length}function la(a){return"string"==typeof a}function z(a){return"number"==typeof a}function ma(a){return"function"==ea(a)}function pa(a){a=ea(a);return"object"==a||"array"==a||"function"==a}function qa(a){return a[sa]||(a[sa]=++ta)}
@@ -147,9 +186,9 @@ Ee.prototype.parse=function(a,b,c){Fe(this,1);setTimeout(function(){var d=Ge(b),
 var He={STL:[te,r,r],VTK:[ue,r,r],TRK:[De,r,r],FSM:[ve,r,r],INFLATED:[ve,r,r],SMOOTHWM:[ve,r,r],SPHERE:[ve,r,r],PIAL:[ve,r,r],ORIG:[ve,r,r],NRRD:[xe,r,r],CRV:[Ae,r,r],MGH:[ze,s,r],MGZ:[ze,o,r],TXT:[Ce,r,r],LUT:[Ce,r,r],PNG:[Be,"png","arraybuffer"],JPG:[Be,"jpeg","arraybuffer"],JPEG:[Be,"jpeg","arraybuffer"],GIF:[Be,"gif","arraybuffer"]};function Z(a,b){(!z(a)||!z(b))&&i(Error("A camera needs valid width and height values."));J.call(this);this.e="camera";this.ha=new K(0,0,100);this.Tb=new K(0,0,0);this.C=new K(0,1,0);this.s=this.xd(this.ha,this.Tb);this.vb=new Float32Array(this.s.J())}F(Z,J);Z.prototype.Ae=function(a){(!x(a)||!(a instanceof U))&&i(Error("Could not observe the interactor."));I(a,vd,this.Xg.bind(this));I(a,xd,this.bh.bind(this))};
 Z.prototype.bh=function(a){a instanceof Gd||i(Error("Received no valid zoom event."));a.wb?this.gg(a.$a):this.hg(a.$a)};Z.prototype.Xg=function(a){a instanceof Ed||i(Error("Received no valid pan event."));this.Rf(a.N)};Z.prototype.__defineGetter__("view",u("s"));Z.prototype.__defineSetter__("view",function(a){(!x(a)||!(a instanceof O))&&i(Error("Invalid view matrix."));this.s=a;this.vb=new Float32Array(this.s.J())});Z.prototype.__defineGetter__("position",function(){return[this.ha.x,this.ha.y,this.ha.b]});
 Z.prototype.__defineSetter__("position",function(a){(!x(a)||!(a instanceof Array)||3!=a.length)&&i(Error("Invalid position."));this.ha=new K(a[0],a[1],a[2]);this.reset()});Z.prototype.__defineGetter__("focus",function(){return[this.Tb.x,this.Tb.y,this.Tb.b]});Z.prototype.__defineSetter__("focus",function(a){(!x(a)||!(a instanceof Array)||3!=a.length)&&i(Error("Invalid focus"));this.Tb=new K(a[0],a[1],a[2]);this.reset()});Z.prototype.__defineGetter__("up",function(){return[this.C.x,this.C.y,this.C.b]});
-Z.prototype.__defineSetter__("up",function(a){(!x(a)||!(a instanceof Array)||3!=a.length)&&i(Error("Invalid up vector."));this.C=new K(a[0],a[1],a[2]);this.reset()});v=Z.prototype;v.reset=function(){this.s=this.xd(this.ha,this.Tb);this.vb=new Float32Array(this.s.J())};v.Rf=function(a){a instanceof Yc||i(Error("Invalid distance vector for pan operation."));a=new K(-a.x,a.y,0);a=jd(4).translate(a);this.s=new O(a.multiply(this.s));this.vb=new Float32Array(this.s.J());this.dispatchEvent(new Id)};
-v.gg=function(a){var b=20;x(a)&&!a&&(b=1);a=new K(0,0,b);a=jd(4).translate(a);this.s=new O(a.multiply(this.s));this.vb=new Float32Array(this.s.J());this.dispatchEvent(new Id)};v.hg=function(a){var b=30;x(a)&&!a&&(b=1);a=new K(0,0,-b);a=jd(4).translate(a);this.s=new O(a.multiply(this.s));this.vb=new Float32Array(this.s.J());this.dispatchEvent(new Id)};v.xd=function(a,b){(!(a instanceof K)||!(b instanceof K))&&i(Error("3D vectors required for calculating the view."));return jd(4)};A("X.camera",Z);
-A("X.camera.prototype.pan",Z.prototype.Rf);A("X.camera.prototype.zoomIn",Z.prototype.gg);A("X.camera.prototype.zoomOut",Z.prototype.hg);function Ie(a){function b(a,b,d){b=2*b*Math.PI;b=j.pb(Math.cos(b)).cc(k.pb(Math.sin(b)));a=c.cc(e.pb(a)).cc(b.pb(f));d=b.pb(1-Math.abs(d)).cc(g.pb(d));return new Ic(a,d)}this.t=[];for(var a=a||{},c=new Ca(a.start||[0,-1,0]),d=new Ca(a.end||[0,1,0]),e=d.Gc(c),f=a.La||1,a=a.Je||16,g=e.Mc(),h=0.5<Math.abs(g.y()),j=(new Ca(h,!h,0)).ke(g).Mc(),k=j.ke(g).Mc(),h=new Ic(c,g.ye()),d=new Ic(d,g.Mc()),l=[],n=0;n<a;n++){var p=n/a,q=(n+1)/a;l.push(new Kc([h,b(0,p,-1),b(0,q,-1)]));l.push(new Kc([b(0,q,0),b(0,p,
+Z.prototype.__defineSetter__("up",function(a){(!x(a)||!(a instanceof Array)||3!=a.length)&&i(Error("Invalid up vector."));this.C=new K(a[0],a[1],a[2]);this.reset()});v=Z.prototype;v.reset=function(){this.s=this.xd(this.ha,this.Tb);this.vb=new Float32Array(this.s.J())};
+v.Rf=function(a){a instanceof Array&&2==a.length?a=new Yc(a[0],a[1]):a instanceof Yc||i(Error("Invalid distance vector for pan operation."));a=new K(-a.x,a.y,0);a=jd(4).translate(a);this.s=new O(a.multiply(this.s));this.vb=new Float32Array(this.s.J());this.dispatchEvent(new Id)};v.gg=function(a){var b=20;x(a)&&!a&&(b=1);a=new K(0,0,b);a=jd(4).translate(a);this.s=new O(a.multiply(this.s));this.vb=new Float32Array(this.s.J());this.dispatchEvent(new Id)};
+v.hg=function(a){var b=30;x(a)&&!a&&(b=1);a=new K(0,0,-b);a=jd(4).translate(a);this.s=new O(a.multiply(this.s));this.vb=new Float32Array(this.s.J());this.dispatchEvent(new Id)};v.xd=function(a,b){(!(a instanceof K)||!(b instanceof K))&&i(Error("3D vectors required for calculating the view."));return jd(4)};A("X.camera",Z);A("X.camera.prototype.pan",Z.prototype.Rf);A("X.camera.prototype.zoomIn",Z.prototype.gg);A("X.camera.prototype.zoomOut",Z.prototype.hg);function Ie(a){function b(a,b,d){b=2*b*Math.PI;b=j.pb(Math.cos(b)).cc(k.pb(Math.sin(b)));a=c.cc(e.pb(a)).cc(b.pb(f));d=b.pb(1-Math.abs(d)).cc(g.pb(d));return new Ic(a,d)}this.t=[];for(var a=a||{},c=new Ca(a.start||[0,-1,0]),d=new Ca(a.end||[0,1,0]),e=d.Gc(c),f=a.La||1,a=a.Je||16,g=e.Mc(),h=0.5<Math.abs(g.y()),j=(new Ca(h,!h,0)).ke(g).Mc(),k=j.ke(g).Mc(),h=new Ic(c,g.ye()),d=new Ic(d,g.Mc()),l=[],n=0;n<a;n++){var p=n/a,q=(n+1)/a;l.push(new Kc([h,b(0,p,-1),b(0,q,-1)]));l.push(new Kc([b(0,q,0),b(0,p,
 0),b(1,p,0),b(1,q,0)]));l.push(new Kc([d,b(1,q,1),b(1,p,1)]))}return Nc(l)}F(Ie,Mc);function Je(){S.call(this);this.e="cylinder";this.ce=[-10,-10,-10];this.Kd=[10,10,10];this.Eb=10;this.Fb=32;Ea(this,new sd)}F(Je,S);Je.prototype.__defineGetter__("start",u("ce"));Je.prototype.__defineSetter__("start",function(a){(!x(a)||!(a instanceof Array)||3!=a.length)&&i(Error("Invalid start"));this.ce=a});Je.prototype.__defineGetter__("end",u("Kd"));Je.prototype.__defineSetter__("end",function(a){(!x(a)||!(a instanceof Array)||3!=a.length)&&i(Error("Invalid end"));this.Kd=a});
 Je.prototype.__defineGetter__("radius",u("Eb"));Je.prototype.__defineSetter__("radius",function(a){z(a)||i(Error("Invalid radius."));this.Eb=a});Je.prototype.R=function(){ud(this,new Ie({start:this.ce,end:this.Kd,La:this.Eb,Je:this.Fb}));Je.h.R.call(this)};A("X.cylinder",Je);A("X.cylinder.prototype.modified",Je.prototype.R);function Ke(a){function b(a,b){var a=a*2*Math.PI,b=b*Math.PI,e=new Ca(Math.cos(a)*Math.sin(b),Math.cos(b),Math.sin(a)*Math.sin(b));g.push(new Ic(c.cc(e.pb(d)),e))}this.t=[];for(var a=a||{},c=new Ca(a.ge||[0,0,0]),d=a.La||1,e=a.Je||16,a=a.oh||8,f=[],g=[],h=0;h<e;h++)for(var j=0;j<a;j++)g=[],b(h/e,j/a),0<j&&b((h+1)/e,j/a),j<a-1&&b((h+1)/e,(j+1)/a),b(h/e,(j+1)/a),f.push(new Kc(g));return Nc(f)}F(Ke,Mc);function Le(){S.call(this);this.e="sphere";this.i=[0,0,0];this.Eb=5;this.Fb=32;this.qg=16;Ea(this,new sd)}F(Le,S);Le.prototype.__defineGetter__("center",u("i"));Le.prototype.__defineSetter__("center",function(a){(!x(a)||!(a instanceof Array)||3!=a.length)&&i(Error("Invalid center"));this.i=a});Le.prototype.__defineGetter__("radius",u("Eb"));Le.prototype.__defineSetter__("radius",function(a){z(a)||i(Error("Invalid radius."));this.Eb=a});
 Le.prototype.R=function(){ud(this,new Ke({ge:this.i,La:this.Eb,Je:this.Fb,oh:this.qg}));Le.h.R.call(this)};A("X.sphere",Le);A("X.sphere.prototype.modified",Le.prototype.R);function me(a){V.call(this);this.e="labelmap";this.Wa=a}F(me,V);me.prototype.R=function(){var a=new qd;a.fa=this;this.dispatchEvent(a);this.Wa.R()};A("X.labelmap",me);function Me(a){this.t=[];var a=a||{},b=new Ca(a.ge||[0,0,0]),c=!a.La?[1,1,1]:a.La.length?a.La:[a.La,a.La,a.La];return Nc([[[0,4,6,2],[-1,0,0]],[[1,3,7,5],[1,0,0]],[[0,1,5,4],[0,-1,0]],[[2,6,7,3],[0,1,0]],[[0,2,3,1],[0,0,-1]],[[4,5,7,6],[0,0,1]]].map(function(a){return new Kc(a[0].map(function(e){e=new Ca(b.x()+c[0]*(2*!!(e&1)-1),b.y()+c[1]*(2*!!(e&2)-1),b.b()+c[2]*(2*!!(e&4)-1));return new Ic(e,new Ca(a[1]))}))}))}F(Me,Mc);function Ne(){S.call(this);this.e="cube";this.i=[0,0,0];this.Qd=this.Pd=this.Od=20;this.Gb=[0,1,1,1,1,0,0,1,1,0,0,0,1,1,1,0,0,0,1,1,0,0,0,1,0,1,1,1,1,0,0,1,1,0,0,0,0,0,0,1,1,1,0,0,1,1,1,0,1,1,1,0,0,0,1,1,0,0,0,1,0,1,1,1,1,0,0,1,1,0,0,0];Ea(this,new sd)}F(Ne,S);Ne.prototype.__defineGetter__("center",u("i"));Ne.prototype.__defineSetter__("center",function(a){(!x(a)||!(a instanceof Array)||3!=a.length)&&i(Error("Invalid center"));this.i=a});Ne.prototype.__defineGetter__("lengthX",u("Od"));
