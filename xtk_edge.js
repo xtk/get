@@ -1,3 +1,42 @@
+/*
+ * 
+ *                  xxxxxxx      xxxxxxx
+ *                   x:::::x    x:::::x 
+ *                    x:::::x  x:::::x  
+ *                     x:::::xx:::::x   
+ *                      x::::::::::x    
+ *                       x::::::::x     
+ *                       x::::::::x     
+ *                      x::::::::::x    
+ *                     x:::::xx:::::x   
+ *                    x:::::x  x:::::x  
+ *                   x:::::x    x:::::x 
+ *              THE xxxxxxx      xxxxxxx TOOLKIT
+ *                    
+ *                  http://www.goXTK.com
+ *                   
+ * Copyright (c) 2012 The X Toolkit Developers <dev@goXTK.com>
+ *                   
+ *    The X Toolkit (XTK) is licensed under the MIT License:
+ *      http://www.opensource.org/licenses/mit-license.php
+ * 
+ *      "Free software" is a matter of liberty, not price.
+ *      "Free" as in "free speech", not as in "free beer".
+ *                                         - Richard M. Stallman
+ * 
+ * FUELED BY:
+ *  - the wonderful Constructive Solid Geometry library by Evan Wallace (http://madebyevan.com)
+ *    LICENSE: https://raw.github.com/xtk/X/master/lib/csg/LICENSE
+ *
+ *  - parts of the Google Closure Library (http://code.google.com/closure/library)
+ *    LICENSE: https://raw.github.com/xtk/X/master/lib/closure-library/LICENSE
+ * 
+ *  - the JSXCompressor library (http://jsxgraph.uni-bayreuth.de/wp/jsxcompressor/)
+ *    LICENSE: https://raw.github.com/xtk/X/master/lib/JXG/LICENSE
+ *
+ * MORE CREDITS: https://raw.github.com/xtk/X/master/LICENSE
+ *
+ */
 function i(a){throw a;}var m=void 0,o=!0,r=null,s=!1;function aa(){return function(){}}function ba(a){return function(b){this[a]=b}}function u(a){return function(){return this[a]}}var v,ca=this;function da(){}
 function ea(a){var b=typeof a;if("object"==b)if(a){if(a instanceof Array)return"array";if(a instanceof Object)return b;var c=Object.prototype.toString.call(a);if("[object Window]"==c)return"object";if("[object Array]"==c||"number"==typeof a.length&&"undefined"!=typeof a.splice&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("splice"))return"array";if("[object Function]"==c||"undefined"!=typeof a.call&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("call"))return"function"}else return"null";
 else if("function"==b&&"undefined"==typeof a.call)return"object";return b}function ga(a){return a!==m}function x(a){return a!=r}function ja(a){return"array"==ea(a)}function ka(a){var b=ea(a);return"array"==b||"object"==b&&"number"==typeof a.length}function la(a){return"string"==typeof a}function y(a){return"number"==typeof a}function ma(a){return"function"==ea(a)}function qa(a){a=ea(a);return"object"==a||"array"==a||"function"==a}function ra(a){return a[sa]||(a[sa]=++ta)}
@@ -175,7 +214,7 @@ v.sd=function(){xf.h.sd.call(this);G&&7>eb&&I(this.g(),"resize",this.Md,s,this);
 v.Sf="horizontal";v.Dg=function(){this.Md();this.dispatchEvent("change")};v.Md=function(){if(this.Fa){var a=this.wd(),b=this.vd(),a=(this.xd()-a)/(b-a),b=Math.round(100*a);"vertical"==this.Sf?G&&7>eb?(this.Fa.style.top=0,this.Fa.style.height="100%",b=this.Fa.offsetHeight,a=Math.round(a*b),this.Fa.style.top=b-a+"px",this.Fa.style.height=a+"px"):(this.Fa.style.top=100-b+"%",this.Fa.style.height=b+"%"):this.Fa.style.width=b+"%"}};v.G=function(){Af(this);xf.h.G.call(this);this.Fa=r;this.dc.Ba()};function Bf(a,b){x(a)||i(Error("No valid parent element."));x(b)||i(Error("Invalid initial value."));xf.call(this);this.e="progressbar";this.ra=a;this.Vc=this.Va=r;this.rb=[];this.rb=[".progress-bar-horizontal {\n  position: relative;\n  border: 1px solid #949dad;\n  background: white;\n  padding: 1px;\n  overflow: hidden;\n  margin: 2px;\n  width: 100px;\n  height: 5px;\n}",".progress-bar-thumb {\n  position: relative;\n  background: #F62217;\n  overflow: hidden;\n  width: 0%;\n  height: 100%;\n}",
 ".progress-bar-thumb-done {\n  background: #57E964;\n}"];this.Kd(b);this.ue()}F(Bf,xf);
 Bf.prototype.ue=function(){if("static"==this.ra.style.position||""==this.ra.style.position)this.ra.style.position="relative";var a=document.getElementsByTagName("head")[0],b=be("style");b.type="text/css";b.media="screen";var c=document.createTextNode(this.rb[0]),d=document.createTextNode(this.rb[1]),e=document.createTextNode(this.rb[2]);a.appendChild(b);b.appendChild(c);b.appendChild(d);b.appendChild(e);this.Va=b;this.fc(this.ra);a=this.g();a.style.position="absolute";a.style.top=(this.ra.clientHeight-
-5)/2;a.style.left=(this.ra.clientWidth-100)/2};function Cf(a){var b=a.g().style.top,c=a.g().style.left;fe(a.g());var d=new Bf(a.ra,100),e=d.g();e.style.position="absolute";e.style.top=b;e.style.left=c;(e.firstElementChild!=m?e.firstElementChild:ge(e.firstChild)).classList.add("progress-bar-thumb-done");a.Vc=d}Bf.prototype.xe=function(){this.Va&&fe(this.Va);this.g()&&fe(this.g());this.Vc&&fe(this.Vc.g());this.Vc=this.Va=r};var Df=ca.window;function Ef(a,b,c){ma(a)?c&&(a=wa(a,c)):a&&"function"==typeof a.handleEvent?a=wa(a.handleEvent,a):i(Error("Invalid listener argument"));return 2147483647<b?-1:Df.setTimeout(a,b||0)};function Ff(){J.call(this);this.e="renderer";this.p=window.document.body;this.D=this.p.clientWidth;this.z=this.p.clientHeight;this.xb=this.o=this.aa=r;this.Qa=new Se(ud);this.mb=[];this.T=r;this.Vd=this.$c=s;this.a=this.Ia=r;this.M={PROGRESSBAR_ENABLED:o};window.console.log("XTK Release 4 -- 04/12/12 -- http://www.goXTK.com")}F(Ff,J);v=Ff.prototype;v.$g=function(a){this.Ia&&this.Ia.Kd(100*a.jf)};v.Qg=function(a){x(a)&&a instanceof td&&this.Ma(a.fa)};v.Fe=function(a){(!x(a)||!(a instanceof Md))&&i(Error("Invalid hover event."))};
+5)/2;a.style.left=(this.ra.clientWidth-100)/2;a.classList.add("xtk-progress-bar")};function Cf(a){var b=a.g().style.top,c=a.g().style.left;fe(a.g());var d=new Bf(a.ra,100),e=d.g();e.style.position="absolute";e.style.top=b;e.style.left=c;e.classList.add("xtk-progress-bar");(e.firstElementChild!=m?e.firstElementChild:ge(e.firstChild)).classList.add("progress-bar-thumb-done");a.Vc=d}Bf.prototype.xe=function(){this.Va&&fe(this.Va);this.g()&&fe(this.g());this.Vc&&fe(this.Vc.g());this.Vc=this.Va=r};var Df=ca.window;function Ef(a,b,c){ma(a)?c&&(a=wa(a,c)):a&&"function"==typeof a.handleEvent?a=wa(a.handleEvent,a):i(Error("Invalid listener argument"));return 2147483647<b?-1:Df.setTimeout(a,b||0)};function Ff(){J.call(this);this.e="renderer";this.p=window.document.body;this.D=this.p.clientWidth;this.z=this.p.clientHeight;this.xb=this.o=this.aa=r;this.Qa=new Se(ud);this.mb=[];this.T=r;this.Vd=this.$c=s;this.a=this.Ia=r;this.M={PROGRESSBAR_ENABLED:o};window.console.log("XTK Release 4 -- 04/12/12 -- http://www.goXTK.com")}F(Ff,J);v=Ff.prototype;v.$g=function(a){this.Ia&&this.Ia.Kd(100*a.jf)};v.Qg=function(a){x(a)&&a instanceof td&&this.Ma(a.fa)};v.Fe=function(a){(!x(a)||!(a instanceof Md))&&i(Error("Invalid hover event."))};
 v.ah=function(){var a=Zd(this.p);this.D=a.clientWidth;this.z=a.clientHeight;a=Zd(this.aa);a.width=this.D;a.height=this.z;this instanceof Gf&&(this.a.viewport(0,0,this.D,this.z),this.o.df=new Float32Array(We(this.o.Ve,this.aa.width/this.aa.height).J()));this.gc()};v.Ge=function(a){(!x(a)||!(a instanceof Kd))&&i(Error("Invalid scroll event."))};Ff.prototype.__defineGetter__("config",u("M"));Ff.prototype.__defineGetter__("interactor",u("xb"));Ff.prototype.__defineGetter__("camera",u("o"));
 Ff.prototype.__defineGetter__("loadingCompleted",u("Vd"));Ff.prototype.__defineGetter__("container",u("p"));Ff.prototype.__defineSetter__("container",function(a){x(a)||i(Error("An ID to a valid container (<div>..) is required."));var b=a;la(b)&&(b=Zd(a));qa(b)&&1==b.nodeType||i(Error("Could not find the given container."));this.p=b});v=Ff.prototype;v.gc=function(){this.o.reset();this.ua(s,s)};
 function Hf(a){a.M.PROGRESSBAR_ENABLED&&a.Ia&&!a.Se&&(Cf(a.Ia),a.Se=Ef(function(){this.Se=r;this.Ia&&(this.Ia.xe(),this.Ia=r);this.fc()}.bind(a),700))}
