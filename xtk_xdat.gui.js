@@ -2317,7 +2317,12 @@ dat.GUI = dat.gui.GUI = (function (css, saveDialogueContents, styleSheet, contro
     var li = addRow(gui, container, params.before);
 
     dom.addClass(li, GUI.CLASS_CONTROLLER_ROW);
-    dom.addClass(li, typeof controller.getValue());
+
+    if (params.color) {
+      dom.addClass(li, 'string');
+    } else {
+      dom.addClass(li, typeof controller.getValue());
+    }
 
     augmentController(gui, li, controller);
 
